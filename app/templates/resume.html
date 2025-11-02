@@ -1,0 +1,59 @@
+<!-- resume.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Malachi's Resume</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+        <!-- Header: Mission statment + intro -->
+         <header>
+            <h1>Malachi McCloud - Federal-Focused Cleared Full Stack Developer</h1>
+            <p>Architecting reproducible analytics, secure web apps, mission-aligned software with deliverable results</p>
+         </header>
+
+         <!-- Resume nav grid : Links to all the other sections -->
+          <section class="resume-grid">
+
+            <!-- Link to analytics page -->
+             <div class="resume-card">
+                <h2><a href="{{ url_for('analytics') }}">Analytics & Dashboards</a></h2>
+                <p>Seaborn, Pandas, SQL - reproducible products for crticial metrics</p>
+             </div>
+
+             <!-- Link to Power Platform Section in projects -->
+              <div class="resume-card">
+                <h2><a href="{{ url_for('projects') }}#powerapps">Power Platform Solutions</a></h2>
+                <p>Multi-stage BPFs, Dataverse logic, custom products, strong documentation</p>
+              </div>
+
+             <!-- Link to RPA section in projects -->
+              <div class="resume-card">
+                <h2><a href="{{ url_for('projects') }}#rpa">RPA & Desktop Automation</a></h2>
+                <p>Streamlined workflows, secure triggers, federal-grade efficency.</p>
+              </div>
+
+             <!-- Link to experience page -->
+              <div class="resume-card">
+                <h2><a href="{{ url_for('experience') }}">Experience</a></h2>
+                <p>SharePoint, Power Platform, Federal, Financial, Analytics, BPI</p>
+              </div>
+          </section>
+          <!-- Embedded Highlight: Preview of Seaborn chart -->
+              <section class="resume-highlights">
+                <h3>Featured Chart: Incident Resolution Time</h3>
+                <img src="{{ url_for('static', filename='image/resolution_time_by_stage.png') }}" alt="Searborn Chart">
+                <p>This dashboard visualizes workflow efficency across BPF stages using Seaborn and Pandas.</p>
+              </section>
+
+             <!-- Resume actions: Download it and contact me -->
+              <section class="resume-actions">
+                <a href="{{ url_for('static', filename='Malachi_Resume.pdf') }}" download>Download PDF Resume</a>
+                <a href="{{ url_for('contact') }}">Contact Me</a>
+              </section>
+
+    </body>
+</html>
