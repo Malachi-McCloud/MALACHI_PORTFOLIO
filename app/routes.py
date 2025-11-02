@@ -22,7 +22,7 @@ def analytics():
 
 # Route for projects page
 @main.route('/projects')
-def project():
+def projects():
     return render_template('projects.html')
 
 # Route for experience page
