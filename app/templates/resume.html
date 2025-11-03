@@ -21,25 +21,50 @@
             <!-- Link to analytics page -->
              <div class="resume-card">
                 <h2><a href="{{ url_for('main.analytics') }}">Analytics & Dashboards</a></h2>
-                <p>Seaborn, Pandas, SQL - reproducible products for crticial metrics</p>
-             </div>
+                <p>Seaborn, Pandas, SQL - reproducible products for critcial metrics</p>
+             <!-- Skill summary analytics -->
+              <div class="card-details">
+                <p><strong>Skills:</strong> Python, Pandas, Seaborn, PowerBI, Azure Datafactory, Azure Synapse, Excel, SQL, Flask, Jinja2, Gthub Actions, Azure Static Web Apps, CI/CD, Data Storytelling, Workflow Telemetry</p>
+                <p><strong>Tools:</strong> Flask, Seaborn, Pandas, Github Actions, Azure Static Web Apps</p>
+                <p><strong>Mission Impact:</strong> Enable secure, reproducible insights for workflow optiimization.</p>
+              </div>
+              </div>
 
              <!-- Link to Power Platform Section in projects -->
               <div class="resume-card">
                 <h2><a href="{{ url_for('main.projects') }}#powerapps">Power Platform Solutions</a></h2>
                 <p>Multi-stage BPFs, Dataverse logic, custom products, strong documentation</p>
+                
+                <!-- Power Platform skill summary -->
+                <div class="card-details">
+                  <p><strong>Skills:</strong> Multi-stage Business Process flows, document creation, approval flows, business oriented process design, custom interfaces, CRUD applications</p>
+                  <p><strong>Tools:</strong> Power Apps, Power Automate, SharePoint, JSON, Markdown</p>
+                  <p><strong>Mission Impact:</strong> Streamlines federal workflows with secure, low-code automation</p>
+                </div>
               </div>
 
              <!-- Link to RPA section in projects -->
               <div class="resume-card">
                 <h2><a href="{{ url_for('main.projects') }}#rpa">RPA & Desktop Automation</a></h2>
                 <p>Streamlined workflows, secure triggers, federal-grade efficency.</p>
+                <!-- RPA Desktop skill summary -->
+                <div class="card-details">
+                  <p><strong>Skills:</strong> Secure triggers, API integrations, multiple platforms, attended/unattended, document processing, cloud to desktop alignment</p>
+                  <p><strong>Tools:</strong> Power Automate Desktop, VBScript, Windows Task Scheduler</p>
+                  <p><strong>Mission Impact:</strong> Reduces manual workload and enhances compliance in federal environments</p>
+                </div>
               </div>
 
              <!-- Link to experience page -->
               <div class="resume-card">
                 <h2><a href="{{ url_for('main.experience') }}">Experience</a></h2>
                 <p>SharePoint, Power Platform, Federal, Financial, Analytics, BPI</p>
+                <!-- Experience Skill summary -->
+                 <div class="card-details">
+                  <p><strong>Skills:</strong> Cross functional products, process analysis, requirement gathering, solution design with stakeholder alignment</p>
+                  <p><strong>Tools:</strong> SharePoint, Power Platform, Excel, Visio, Python</p>
+                  <p><strong>Mission Impact:</strong> Delivers scalable solutions across federal, financial, and analytics domains</p>
+                 </div>
               </div>
           </section>
           <!-- Embedded Highlight: Preview of Seaborn chart -->
@@ -54,6 +79,11 @@
                 <a href="{{ url_for('static', filename='Malachi_Resume.pdf') }}" download>Download PDF Resume</a>
                 <a href="{{ url_for('main.contact') }}">Contact Me</a>
               </section>
+
+              <!-- Footer Section -->
+               <footer style="text-align:center; font-size: 0.8em; color: #777; margin-top: 40px;">
+                  Last updated: {{ last_updated }}
+               </footer>
 
     </body>
 </html>
