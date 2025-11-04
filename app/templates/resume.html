@@ -81,8 +81,16 @@
               </section>
 
               <!-- Footer Section -->
-               <footer style="text-align:center; font-size: 0.8em; color: #777; margin-top: 40px;">
-                  Last updated: {{ last_updated }}
+               <footer>
+                <p>Last Updated: <span id="last-updated"></span></p>
+                <script>
+                  const updated = new Date();
+                  document.getElementById("last-updated").textContent = updated.toLocaleDateString("en-US",{
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                  })
+                </script>
                </footer>
 
     </body>

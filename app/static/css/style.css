@@ -109,3 +109,10 @@ body {
 .card-details p {
   margin: 4px 0;
 }
+
+/* Footer Alignment */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #cccccc; 
+}

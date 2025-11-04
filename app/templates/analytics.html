@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Analytics Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+                font-family: 'Segoe UI', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+
+            .tile {
+                background-color: #1e1e2f;
+                border-radius: 8px;
+                padding: 1.5rem;
+                transition: background-color 0.3s ease;
+                text-align: center;
+            }
+
+            .tile:hover {
+                background-color: #2a2a3f;
+            }
+
+            .tile h3 {
+                margin-top: 0;
+                color:#66ccff;
+            }
+
+            .tile p {
+                margin-bottom: 1rem;
+            }
+
+            .coming-soon {
+                font-size: 0.9rem;
+                color: #999;
+                font-style: italic;
+            }
+
+            footer {
+                text-align: center;
+                padding: 1rem 0;
+                color: #cccccc;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Analytics Dashboard</h1>
+            <p>Mission-align insights power by Python, Pandas, and Seaborn</p>
+        </header>
+
+        <section class="grid">
+            <div class="tile">
+                <h3>Workflow Efficency</h3>
+                <p>Visualize throughput across Power Platform stages.</p>
+                <span class="coming-soon">Coming Soon</span>
+            </div>
+
+            <div class="tile">
+                <h3>Power Platform Metrics</h3>
+                <p>Explore usage patterns and automation impact.</p>
+                <span class="coming-soon">Coming Soon</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>Last Updated: <span id="last-updated"></span></p>
+            <script>
+            const updated = new Date();
+            document.getElementById("last-updated").textContent = updated.toLocaleDateString("en-US", {
+             year: "numeric",
+             month: "long",
+             day: "numeric"
+             });
+    </script>
+        </footer>
+    </body>
+</html>
