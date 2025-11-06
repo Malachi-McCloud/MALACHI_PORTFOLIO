@@ -2,10 +2,15 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #121212;
-  color: #e0e0e0;
+  color: #f0f0f0;
   margin: 0;
-  padding: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Use 'center' for vertical centering */
+  min-height: 100vh;
 }
+
 
 /*  Header */
 .resume-header {
@@ -115,4 +120,13 @@ footer {
   text-align: center;
   padding: 1rem 0;
   color: #cccccc; 
+}
+
+
+
+.resume-container {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }

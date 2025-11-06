@@ -1,0 +1,97 @@
+<!-- resume.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Malachi's Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+
+    <body>
+        <!-- Header: Mission statment + intro -->
+         <header class="resume-header">
+            <h1>Malachi McCloud <br> Federal-Focused Cleared Full Stack Developer</h1>
+            <p>Architecting reproducible analytics, secure web apps, mission-aligned software with deliverable results</p>
+         </header>
+
+         <!-- Resume nav grid : Links to all the other sections -->
+          <section class="resume-grid">
+
+            <!-- Link to analytics page -->
+             <div class="resume-card">
+                <h2><a href="{{ url_for('main.analytics') }}">Analytics & Dashboards</a></h2>
+                <p>Seaborn, Pandas, SQL - reproducible products for critcial metrics</p>
+             <!-- Skill summary analytics -->
+              <div class="card-details">
+                <p><strong>Skills:</strong> Python, Pandas, Seaborn, PowerBI, Azure Datafactory, Azure Synapse, Excel, SQL, Flask, Jinja2, Gthub Actions, Azure Static Web Apps, CI/CD, Data Storytelling, Workflow Telemetry</p>
+                <p><strong>Tools:</strong> Flask, Seaborn, Pandas, Github Actions, Azure Static Web Apps</p>
+                <p><strong>Mission Impact:</strong> Enable secure, reproducible insights for workflow optiimization.</p>
+              </div>
+              </div>
+
+             <!-- Link to Power Platform Section in projects -->
+              <div class="resume-card">
+                <h2><a href="{{ url_for('main.projects') }}#powerapps">Power Platform Solutions</a></h2>
+                <p>Multi-stage BPFs, Dataverse logic, custom products, strong documentation</p>
+                
+                <!-- Power Platform skill summary -->
+                <div class="card-details">
+                  <p><strong>Skills:</strong> Multi-stage Business Process flows, document creation, approval flows, business oriented process design, custom interfaces, CRUD applications</p>
+                  <p><strong>Tools:</strong> Power Apps, Power Automate, SharePoint, JSON, Markdown</p>
+                  <p><strong>Mission Impact:</strong> Streamlines federal workflows with secure, low-code automation</p>
+                </div>
+              </div>
+
+             <!-- Link to RPA section in projects -->
+              <div class="resume-card">
+                <h2><a href="{{ url_for('main.projects') }}#rpa">RPA & Desktop Automation</a></h2>
+                <p>Streamlined workflows, secure triggers, federal-grade efficency.</p>
+                <!-- RPA Desktop skill summary -->
+                <div class="card-details">
+                  <p><strong>Skills:</strong> Secure triggers, API integrations, multiple platforms, attended/unattended, document processing, cloud to desktop alignment</p>
+                  <p><strong>Tools:</strong> Power Automate Desktop, VBScript, Windows Task Scheduler</p>
+                  <p><strong>Mission Impact:</strong> Reduces manual workload and enhances compliance in federal environments</p>
+                </div>
+              </div>
+
+             <!-- Link to experience page -->
+              <div class="resume-card">
+                <h2><a href="{{ url_for('main.experience') }}">Experience</a></h2>
+                <p>SharePoint, Power Platform, Federal, Financial, Analytics, BPI</p>
+                <!-- Experience Skill summary -->
+                 <div class="card-details">
+                  <p><strong>Skills:</strong> Cross functional products, process analysis, requirement gathering, solution design with stakeholder alignment</p>
+                  <p><strong>Tools:</strong> SharePoint, Power Platform, Excel, Visio, Python</p>
+                  <p><strong>Mission Impact:</strong> Delivers scalable solutions across federal, financial, and analytics domains</p>
+                 </div>
+              </div>
+          </section>
+          <!-- Embedded Highlight: Preview of Seaborn chart -->
+              <section class="resume-highlights">
+                <h3>Featured Chart: Incident Resolution Time</h3>
+                <img src="{{ url_for('static', filename='images/resolution_time_by_stage.png') }}" alt="Searborn Chart">
+                <p>This dashboard visualizes workflow efficency across BPF stages using Seaborn and Pandas.</p>
+              </section>
+
+             <!-- Resume actions: Download it and contact me -->
+              <section class="resume-actions">
+                <a href="{{ url_for('static', filename='Malachi_Resume.pdf') }}" download>Download PDF Resume</a>
+                <a href="{{ url_for('main.contact') }}">Contact Me</a>
+              </section>
+
+              <!-- Footer Section -->
+               <footer>
+                <p>Last Updated: <span id="last-updated"></span></p>
+                <script>
+                  const updated = new Date();
+                  document.getElementById("last-updated").textContent = updated.toLocaleDateString("en-US",{
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                  })
+                </script>
+               </footer>
+
+    </body>
+</html>

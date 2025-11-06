@@ -1,97 +1,83 @@
-<!-- resume.html -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Malachi's Resume</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  </head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Malachi McCloud</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <body>
-        <!-- Header: Mission statment + intro -->
-         <header class="resume-header">
-            <h1>Malachi McCloud <br> Federal-Focused Cleared Full Stack Developer</h1>
-            <p>Architecting reproducible analytics, secure web apps, mission-aligned software with deliverable results</p>
-         </header>
 
-         <!-- Resume nav grid : Links to all the other sections -->
-          <section class="resume-grid">
+    </head>
 
-            <!-- Link to analytics page -->
-             <div class="resume-card">
-                <h2><a href="{{ url_for('main.analytics') }}">Analytics & Dashboards</a></h2>
-                <p>Seaborn, Pandas, SQL - reproducible products for critcial metrics</p>
-             <!-- Skill summary analytics -->
-              <div class="card-details">
-                <p><strong>Skills:</strong> Python, Pandas, Seaborn, PowerBI, Azure Datafactory, Azure Synapse, Excel, SQL, Flask, Jinja2, Gthub Actions, Azure Static Web Apps, CI/CD, Data Storytelling, Workflow Telemetry</p>
-                <p><strong>Tools:</strong> Flask, Seaborn, Pandas, Github Actions, Azure Static Web Apps</p>
-                <p><strong>Mission Impact:</strong> Enable secure, reproducible insights for workflow optiimization.</p>
-              </div>
-              </div>
+    <body class="dark-mode">
+        <div class="resume-container">
+            <header class="resume-header">
+                <h1>Malachi McCloud</h1>
+                <p>Full-Stack Developer | Federal Solutions Architect | Power Platform Specialist</p>
+                <p>Email: mwmccloud0@gmail.com | GitHub | LinkedIn | Portfolio</p>
+            </header>
 
-             <!-- Link to Power Platform Section in projects -->
-              <div class="resume-card">
-                <h2><a href="{{ url_for('main.projects') }}#powerapps">Power Platform Solutions</a></h2>
-                <p>Multi-stage BPFs, Dataverse logic, custom products, strong documentation</p>
-                
-                <!-- Power Platform skill summary -->
-                <div class="card-details">
-                  <p><strong>Skills:</strong> Multi-stage Business Process flows, document creation, approval flows, business oriented process design, custom interfaces, CRUD applications</p>
-                  <p><strong>Tools:</strong> Power Apps, Power Automate, SharePoint, JSON, Markdown</p>
-                  <p><strong>Mission Impact:</strong> Streamlines federal workflows with secure, low-code automation</p>
+            <section class="resume-section">
+                <h2>Professional Summary</h2>
+                <p>Strategic, mission-driven developer focused on secure, reprodcuible solutons solutions for federal impact. Experienced in workflow design, analytics, and technical leadership across SharePoint, Power Platform, and full-stack web environments.</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Python (Pandas, Seaborn, SQL, Matlab, Odata)</li>
+                    <li>Power Platform & SharePoint Automation</li>
+                    <li>CI/CD with Azure Static Web Apps</li>
+                    <li>Modular Web Architecture (Flask, HTML/CSS, GitHub Actions)</li>
+                    <li>Workflow Documentation & Reproducibility</li>
+                </ul>
+            </section>
+
+            <section class="resume-section">
+                <h2>Experience</h2>
+                <div class="job-entry">
+                    <h3>SharePoint/Power Platform Specialist</h3>
+                    <p><strong>Federal Contractor - Norfolk, VA</strong> | November 2024 - Present</p>
+                    <ul>
+                        <li>Designated and documented scalable workflows across Power Platform and SharePoint.</li>
+                        <li>Architeected modular dashboards using Python and SQL for federal-grade analytics.</li>
+                        <li>Led CI/CD deployment using Azure Static Web Apps and GitHub Actions.</li>
+                    </ul>
                 </div>
-              </div>
+                <!-- Add more job entries as needed -->
+            </section>
 
-             <!-- Link to RPA section in projects -->
-              <div class="resume-card">
-                <h2><a href="{{ url_for('main.projects') }}#rpa">RPA & Desktop Automation</a></h2>
-                <p>Streamlined workflows, secure triggers, federal-grade efficency.</p>
-                <!-- RPA Desktop skill summary -->
-                <div class="card-details">
-                  <p><strong>Skills:</strong> Secure triggers, API integrations, multiple platforms, attended/unattended, document processing, cloud to desktop alignment</p>
-                  <p><strong>Tools:</strong> Power Automate Desktop, VBScript, Windows Task Scheduler</p>
-                  <p><strong>Mission Impact:</strong> Reduces manual workload and enhances compliance in federal environments</p>
+            <section class="resume-section">
+                <h2>Projects</h2>
+                <div class="project-entry">
+                    <h3>Modular Resume Portfolio</h3>
+                    <p>Dark-mode, tactical layout showcasing federal-gradae presentation and reproducible architecture.</p>
                 </div>
-              </div>
+                <div class="project-entry">
+                    <h3>Power Platform Workflow Dashboards</h3>
+                    <p>Python-powered analytics visualizing flow metrics and simulation data for mission alignment.</p>
+                </div>
+            </section>
 
-             <!-- Link to experience page -->
-              <div class="resume-card">
-                <h2><a href="{{ url_for('main.experience') }}">Experience</a></h2>
-                <p>SharePoint, Power Platform, Federal, Financial, Analytics, BPI</p>
-                <!-- Experience Skill summary -->
-                 <div class="card-details">
-                  <p><strong>Skills:</strong> Cross functional products, process analysis, requirement gathering, solution design with stakeholder alignment</p>
-                  <p><strong>Tools:</strong> SharePoint, Power Platform, Excel, Visio, Python</p>
-                  <p><strong>Mission Impact:</strong> Delivers scalable solutions across federal, financial, and analytics domains</p>
-                 </div>
-              </div>
-          </section>
-          <!-- Embedded Highlight: Preview of Seaborn chart -->
-              <section class="resume-highlights">
-                <h3>Featured Chart: Incident Resolution Time</h3>
-                <img src="{{ url_for('static', filename='images/resolution_time_by_stage.png') }}" alt="Searborn Chart">
-                <p>This dashboard visualizes workflow efficency across BPF stages using Seaborn and Pandas.</p>
-              </section>
+            <section class="resume-section">
+                <h2>Education</h2>
+                <p><strong>Bachelor's of Science in Computer Science</strong> - University of Maryland Global Campus</p>
+                <p>Planning graduate studies focused on leaadership, federal mission impact, and tactical scalability.</p>
+            </section>
 
-             <!-- Resume actions: Download it and contact me -->
-              <section class="resume-actions">
-                <a href="{{ url_for('static', filename='Malachi_Resume.pdf') }}" download>Download PDF Resume</a>
-                <a href="{{ url_for('main.contact') }}">Contact Me</a>
-              </section>
+            <section class="resume-section">
+                <h2>Certifications & Training</h2>
+                <ul>
+                    <li>Power Platform Fundamentals (PL-900)</li>
+                    <li>Automation Anywhere Intermediate Bot Developer</li>
+                    <li>Power Platform Skills</li>
+                    <li>Power Platform Skills</li>
+                </ul>
+            </section>
 
-              <!-- Footer Section -->
-               <footer>
-                <p>Last Updated: <span id="last-updated"></span></p>
-                <script>
-                  const updated = new Date();
-                  document.getElementById("last-updated").textContent = updated.toLocaleDateString("en-US",{
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric"
-                  })
-                </script>
-               </footer>
+            <footer class="resume-footer">
+                <p>&copy; 2025 Malachi | Built for clarity, impact and mission alignment</p>
+            </footer>
 
+        </div>
     </body>
 </html>

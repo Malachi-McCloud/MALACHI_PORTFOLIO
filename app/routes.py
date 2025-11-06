@@ -8,7 +8,7 @@ main = Blueprint('main', __name__)
 # Route for homepage
 @main.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('landing.html')
 
 # Route for resume page
 @main.route('/resume')
@@ -34,3 +34,8 @@ def experience():
 @main.route('/contact')
 def contact():
     return render_template('contact.html')
+
+# Route for power plaatform page
+@main.route("/power-platform")
+def power_platform():
+    return render_template("power-platform.html")
