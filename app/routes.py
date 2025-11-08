@@ -15,10 +15,6 @@ def index():
 def resume():
     return render_template('resume.html')
 
-# Route for analytics page
-@main.route('/analytics')
-def analytics():
-    return render_template('analytics.html')
 
 # Route for projects page
 @main.route('/projects')
@@ -35,7 +31,3 @@ def experience():
 def contact():
     return render_template('contact.html')
 
-# Route for power plaatform page
-@main.route("/power-platform")
-def power_platform():
-    return render_template("power-platform.html")

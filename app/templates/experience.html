@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Malachi McCloud</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .experience-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .experience-item {
+      background-color: #1e1e2f;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .experience-item h3 {
+      margin-top: 0;
+      color: #66ccff;
+    }
+
+    .experience-item p {
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      color: #cccccc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Professional Experience</h1>
+    <p>Mission-driven roles delivering scalable solutions across federal, financial, and analytics domains</p>
+  </header>
+
+  <main class="experience-section">
+    <div class="experience-item">
+      <h3>SharePoint / Power Platform Specialist</h3>
+      <p><strong>Focus:</strong> Workflow automation, document management, federal contracting support</p>
+      <p><strong>Impact:</strong> Streamlined processes and improved compliance with secure, low-code solutions</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Knowledge Manager</h3>
+      <p><strong>Focus:</strong> Process analysis, requirement gathering, solution design</p>
+      <p><strong>Impact:</strong> Delivered reproducible documentation and scalable knowledge systems</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Analytics & Data Storytelling</h3>
+      <p><strong>Focus:</strong> Python, Pandas, Seaborn, SQL dashboards</p>
+      <p><strong>Impact:</strong> Enabled secure, reproducible insights for workflow optimization</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Malachi | Mission-Ready Solutions</p>
+    <p>Last Updated: <span id="last-updated"></span></p>
+    <script>
+      const updated = new Date();
+      document.getElementById("last-updated").textContent = updated.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+    </script>
+  </footer>
+</body>
+</html>

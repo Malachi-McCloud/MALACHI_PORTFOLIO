@@ -5,7 +5,7 @@ body {
   color: #f0f0f0;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: flex-start; /* Use 'center' for vertical centering */
   min-height: 100vh;
@@ -67,6 +67,8 @@ body {
 
 .resume-card h2 {
   margin-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .resume-card p {
@@ -125,8 +127,20 @@ footer {
 
 
 .resume-container {
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0 auto;
   width: 100%;
   padding: 2rem;
   box-sizing: border-box;
+}
+
+/* Section Titles */
+section h2 {
+  text-align: center;      /* centers text above grids */
+  margin: 20px 0;          /* spacing above/below */
+  font-size: 1.8em;        /* slightly larger for section headers */
+  color: #ffffff;          /* consistent dark-mode color */
+  border-bottom: 2px solid #333; /* optional underline for clarity */
+  display: inline-block;   /* keeps underline tight to text */
+  padding-bottom: 5px;
 }
