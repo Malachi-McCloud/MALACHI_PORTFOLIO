@@ -1,35 +1,84 @@
-/* Dark Mode */
+/* ================================
+   GLOBAL STYLES (Dark Mode Default)
+   ================================ */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #f0f0f0;
+  background-color: #121212;   /* dark background */
+  color: #f0f0f0;              /* light text */
   margin: 0;
   padding: 0;
   display: block;
   justify-content: center;
-  align-items: flex-start; /* Use 'center' for vertical centering */
+  align-items: flex-start;      /* use 'center' for vertical centering */
   min-height: 100vh;
+
+  font-size: 18px;              /* scaled up from ~16px */
+  line-height: 1.6;             /* more breathing room */
 }
 
+/* ================================
+   RESUME CONTAINER
+   ================================ */
+.resume-container {
+  max-width: 950px;             /* slightly wider */
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem;              /* more padding for balance */
+  box-sizing: border-box;
+}
 
-/*  Header */
+/* ================================
+   HEADER SECTION
+   ================================ */
 .resume-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
 .resume-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+  font-size: 2.4em;             /* larger name/title */
+  margin-bottom: 10px;
   color: #ffffff;
 }
 
 .resume-header p {
-    font-size: 1.2em;
+  font-size: 1.3em;             /* slightly larger subtitle text */
   color: #b0b0b0;
 }
 
-/* === Resume Grid === */
+/* Resume Header Links */
+.resume-header a {
+  color: #ffffff;               /* always white */
+  text-decoration: none;        /* remove underline */
+  font-weight: 500;
+}
+
+.resume-header a:visited,
+.resume-header a:hover,
+.resume-header a:active {
+  color: #ffffff;               /* keep white in all states */
+}
+
+.resume-header a:hover {
+  text-decoration: underline;   /* subtle hover effect */
+}
+
+/* ================================
+   SECTION TITLES
+   ================================ */
+section h2 {
+  text-align: center;      
+  margin: 25px 0;               /* more spacing */
+  font-size: 2em;               /* larger headers */
+  color: #ffffff;          
+  border-bottom: 2px solid #333; 
+  display: inline-block;   
+  padding-bottom: 5px;
+}
+
+/* ================================
+   RESUME GRID + CARDS
+   ================================ */
 .resume-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -38,12 +87,11 @@ body {
 
 .resume-card {
   background-color: #1e1e1e;
-  padding: 20px;
+  padding: 24px;                /* slightly larger padding */
   border-radius: 8px;
   border: 1px solid #333;
   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
   transition: transform 0.2s ease-in-out;
-  /* Center the content */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -53,6 +101,18 @@ body {
 .resume-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.resume-card h2 {
+  margin-bottom: 12px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.4em;             /* slightly larger card titles */
+}
+
+.resume-card p {
+  margin-top: 0;
+  font-size: 1.1em;             /* larger card text */
 }
 
 .resume-card a {
@@ -65,17 +125,9 @@ body {
   text-decoration: underline;
 }
 
-.resume-card h2 {
-  margin-bottom: 10px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.resume-card p {
-  margin-top: 0;
-}
-
-/* Highlights Section */
+/* ================================
+   HIGHLIGHTS SECTION
+   ================================ */
 .resume-highlights {
   margin-top: 40px;
   text-align: center;
@@ -83,13 +135,17 @@ body {
 
 .resume-highlights h3 {
   color: #ffffff;
+  font-size: 1.4em;
 }
 
 .resume-highlights p {
   color: #b0b0b0;
+  font-size: 1.1em;
 }
 
-/* Actions Section */
+/* ================================
+   ACTIONS SECTION
+   ================================ */
 .resume-actions {
   margin-top: 40px;
   text-align: center;
@@ -97,8 +153,9 @@ body {
 
 .resume-actions a {
   color: #90caf9;
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
+  font-size: 1.1em;
 }
 
 .resume-actions a:hover {
@@ -106,9 +163,12 @@ body {
   text-decoration: underline;
 }
 
+/* ================================
+   CARD DETAILS
+   ================================ */
 .card-details {
-  margin-top: 10px;
-  font-size: 0.9em;
+  margin-top: 12px;
+  font-size: 1em;               /* bumped up from 0.9em */
   color: #b0b0b0;
   text-align: left;
 }
@@ -117,30 +177,54 @@ body {
   margin: 4px 0;
 }
 
-/* Footer Alignment */
+/* ================================
+   FOOTER
+   ================================ */
 footer {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   color: #cccccc; 
+  font-size: 1.1em;
 }
 
-
-
-.resume-container {
-  max-width: 900px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
+/* ================================
+   RESUME PAGE OVERRIDES (Paper Effect)
+   ================================ */
+body.resume-page .resume-container {
+  background-color: #eaeaea;    /* paper-like background */
+  color: #222;                 
+  max-width: 850px;             /* slightly wider for paper look */
+  margin: 40px auto;
+  padding: 48px;                /* more padding for balance */
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
-/* Section Titles */
-section h2 {
-  text-align: center;      /* centers text above grids */
-  margin: 20px 0;          /* spacing above/below */
-  font-size: 1.8em;        /* slightly larger for section headers */
-  color: #ffffff;          /* consistent dark-mode color */
-  border-bottom: 2px solid #333; /* optional underline for clarity */
-  display: inline-block;   /* keeps underline tight to text */
-  padding-bottom: 5px;
+body.resume-page section h2 {
+  color: #222;                 
+  border-bottom: 2px solid #bbb;
+}
+
+body.resume-page p,
+body.resume-page li {
+  color: #333;                 
+  font-size: 1.1em;             /* larger text inside paper */
+}
+
+/* Header strip styling for visibility */
+body.resume-page .resume-header {
+  background-color: #2c2c2c;   
+  color: #f0f0f0;
+  padding: 24px;
+  border-radius: 6px 6px 0 0;  
+}
+
+body.resume-page .resume-header h1 {
+  color: #ffffff;
+  font-size: 2.6em;             /* larger name on paper */
+}
+
+body.resume-page .resume-header p {
+  color: #cccccc;
+  font-size: 1.3em;
 }
