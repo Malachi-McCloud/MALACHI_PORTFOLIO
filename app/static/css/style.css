@@ -67,13 +67,14 @@ body {
    SECTION TITLES
    ================================ */
 section h2 {
-  text-align: center;      
-  margin: 25px 0;               /* more spacing */
-  font-size: 2em;               /* larger headers */
-  color: #ffffff;          
-  border-bottom: 2px solid #333; 
-  display: inline-block;   
+  text-align: center;
+  margin: 25px 0;
+  font-size: 2em;
+  color: #ffffff;
+  border-bottom: 2px solid #333;
   padding-bottom: 5px;
+  width: 100%; /* ensures full-width alignment */
+  display: block; /* override inline-block */
 }
 
 /* ================================

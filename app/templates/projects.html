@@ -58,6 +58,7 @@
         .tile h3 {
             margin-top: 0;
             color: #66ccff;
+            text-align: center;
         }
 
         .tile p {
@@ -110,31 +111,65 @@
                 </div>
             </div>
         </section>
+<!-- Power Platform Section -->
+<section id="powerplatform">
+    <h2>Power Platform Workflow Hub</h2>
+    <div class="grid">
+        <div class="tile">
+            <h3>Inspection Report Analytics Pipeline</h3>
+            <p><strong>Problem:</strong> Time-based reports were completed without generating insights. Audits required archived forms, but no centralized analytics existed.</p>
+            <p><strong>Solution:</strong> Built a Power App front-end mimicking the form, backed by a SharePoint List. Normalized data was archived and used to refresh a Power BI dataset, enabling training readiness analytics.</p>
+            <p><strong>Tools:</strong> Power Apps, SharePoint Lists, Power Automate, Power BI</p>
+            <p><strong>Impact:</strong> Enabled audit-ready archiving and live analytics for compliance and readiness tracking.</p>
+        </div>
 
-        <!-- Power Platform Section -->
-        <section id="powerplatform">
-            <h2>Power Platform Workflow Hub</h2>
-            <p>Strategic summary of integrations, goals, and federal alignment.</p>
-            <div class="grid">
-                <div class="tile">
-                    <h3>Workflow Modules</h3>
-                    <p>Modular workflow cards showcasing automation pipelines.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-            </div>
-        </section>
+        <div class="tile">
+            <h3>Multi-Team Approval & Signature Workflow</h3>
+            <p><strong>Problem:</strong> Requests requiring multi-team approval were lost due to manual handling and licensing barriers for digital signatures.</p>
+            <p><strong>Solution:</strong> Created a Power App for structured case submission. Triggered flows created SharePoint Document Library entries and sent Microsoft Approvals with synced OneDrive signing instructions. Naming conventions and error handling ensured traceability.</p>
+            <p><strong>Tools:</strong> Power Apps, SharePoint Document Libraries, Power Automate, Microsoft Approvals</p>
+            <p><strong>Impact:</strong> Reduced lost submissions and streamlined multi-team approvals with secure document handling.</p>
+        </div>
+
+        <div class="tile">
+            <h3>Cloud-to-Desktop Voucher Extraction Pipeline</h3>
+            <p><strong>Problem:</strong> Manual voucher processing led to repetitive work and high error rates.</p>
+            <p><strong>Solution:</strong> Power App submission triggered a cloud flow that queued a Desktop flow on a Power Platform VM. The Desktop flow extracted text from PDFs and updated a SQL table. Staff were notified to verify extraction status.</p>
+            <p><strong>Tools:</strong> Power Apps, SharePoint, Power Automate Cloud & Desktop, Power Platform VM, SQL</p>
+            <p><strong>Impact:</strong> Automated voucher processing and reduced human error with secure, scalable architecture.</p>
+        </div>
+    </div>
 
         <!-- RPA Section -->
-        <section id="rpa">
-            <h2>Robotic Process Automation</h2>
-            <div class="grid">
-                <div class="tile">
-                    <h3>RPA Bots</h3>
-                    <p>Automated repetitive tasks to free mission-critical bandwidth.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-            </div>
-        </section>
+<section id="rpa">
+    <h2>Robotic Process Automation</h2>
+    <div class="grid">
+        <div class="tile">
+            <h3>Loan Data Consolidation & Optimization</h3>
+            <p><strong>Problem:</strong> Loan data was split across three CSV/XLSX files with poor readability and a fragile legacy process that failed 50% of the time and consumed excessive VM resources.</p>
+            <p><strong>Solution:</strong> Collaborated with RPA Lead to rebuild the process using an ODBC Desktop SQL driver. Structured the data into a datatable (2D array in Automation Anywhere) and exported to a preformatted Excel file. Also prototyped an Excel-only model using formulas and RPA, though it was resource-intensive.</p>
+            <p><strong>Tools:</strong> Automation Anywhere, SQL ODBC Driver, Excel</p>
+            <p><strong>Impact:</strong> Reduced runtime, improved reliability, and enabled structured analysis of loan performance.</p>
+        </div>
+
+        <div class="tile">
+            <h3>Taskbot Status & Error Handling Framework</h3>
+            <p><strong>Problem:</strong> RPA flows failed unpredictably, and email-based error handling broke under network/API disruptions, leaving failures undetected.</p>
+            <p><strong>Solution:</strong> Built a reusable taskbot that logged task status (Started, Finished, Waiting) to a SQL table. Added pre-launch status updates and fallback notifications for missed transitions. Enabled a control panel view of task health across deployments.</p>
+            <p><strong>Tools:</strong> Automation Anywhere, SQL, Cloud Automation Framework</p>
+            <p><strong>Impact:</strong> Improved visibility, reduced silent failures, and created a scalable error-handling backbone.</p>
+        </div>
+
+        <div class="tile">
+            <h3>Rate Scraper & Distribution Bot</h3>
+            <p><strong>Problem:</strong> Teams needed accurate financial rates from WSJ and other sites, but manual retrieval was slow and error-prone.</p>
+            <p><strong>Solution:</strong> Designed an RPA taskbot using Selenium to scrape rate tables, process by date, and export to Excel. Automated email distribution to relevant teams. Planned SQL integration for historical tracking and dashboarding.</p>
+            <p><strong>Tools:</strong> Automation Anywhere, Selenium, Excel, Email Automation</p>
+            <p><strong>Impact:</strong> Delivered timely rate updates and laid groundwork for scalable financial data ingestion.</p>
+        </div>
+    </div>
+</section>
+
 
         <!-- CI/CD Section -->
         <section id="cicd">
@@ -151,7 +186,12 @@
         <!-- Documentation Section -->
         <section id="docs">
             <h2>Documentation</h2>
+            <div class="grid">
+                <div class="tile">
+            <h3>Visios, Word Documents, OneNote, Story Boards</h3>
             <p>SOP examples, flow diagrams, and reproducibility notes.</p>
+            </div>
+            </div>
         </section>
     </main>
 
