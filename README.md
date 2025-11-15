@@ -38,6 +38,10 @@ This portfolio is built to demonstrate full-stack readiness and a wide skillset 
 - [ ] Projects page with modular cards and Github links
 - [ ] Sklls matrix with mission-aligned categoriesx
 
+### Development Notes
+I swapped from my PC to my Mac during development to streamline my workflow.
+
+
 
 ## Author 
 
