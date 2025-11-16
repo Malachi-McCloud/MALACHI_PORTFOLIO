@@ -95,22 +95,38 @@
     </header>
 
     <main>
-        <!-- Analytics Section -->
-        <section id="analytics">
-            <h2>Analytics Dashboards</h2>
-            <div class="grid">
-                <div class="tile">
-                    <h3>Workflow Efficiency</h3>
-                    <p>Visualize throughput across Power Platform stages.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                <div class="tile">
-                    <h3>Power Platform Metrics</h3>
-                    <p>Explore usage patterns and automation impact.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-            </div>
-        </section>
+       <!-- Analytics Section -->
+<section id="analytics">
+    <h2>Federal-Grade Analytics</h2>
+    <div class="grid">
+        <!-- Philosophy Tile -->
+        <div class="tile">
+            <h3>Mission-Aligned Analytics</h3>
+            <p>I design analytics solutions with federal-grade standards: reproducibility, security, and clarity. 
+               Every dashboard is built to support decision-making under mission constraints, ensuring tactical impact 
+               and audit-ready reliability.</p>
+        </div>
+
+        <!-- Professional Experience Tile -->
+        <div class="tile">
+            <h3>Professional Dashboard Experience</h3>
+            <p>In my professional roles, I have architected and delivered enterprise-grade dashboards across diverse domains 
+               including qualification renewals, training readiness, financial performance, ROI analysis, and process tracking. 
+               Each solution was engineered for reproducibility and compliance, transforming fragmented data into actionable 
+               insights that supported leadership decisions and operational efficiency. By leveraging Power BI and structured 
+               pipelines, I ensured clarity, scalability, and mission alignment in every deployment.</p>
+        </div>
+
+        <!-- Speed Link Tile -->
+        <div class="tile">
+            <h3>Zillow Analytics Case Study</h3>
+            <p>Explore a full example project applying federal-grade methodology to real housing data.</p>
+            <a href="#zillow" style="color:#66ccff; text-decoration:none; font-weight:bold;">View Zillow Analytics →</a>
+        </div>
+    </div>
+</section>
+
+
 <!-- Power Platform Section -->
 <section id="powerplatform">
     <h2>Power Platform Workflow Hub</h2>
@@ -183,16 +199,44 @@
             </div>
         </section>
 
-        <!-- Documentation Section -->
-        <section id="docs">
-            <h2>Documentation</h2>
-            <div class="grid">
-                <div class="tile">
-            <h3>Visios, Word Documents, OneNote, Story Boards</h3>
-            <p>SOP examples, flow diagrams, and reproducibility notes.</p>
-            </div>
-            </div>
-        </section>
+        <!-- Zillow Analytics Section -->
+<section id="zillow">
+    <h2>Zillow Analytics Case Study</h2>
+    <p>This project demonstrates how methodology translates into reproducible visuals and actionable insights using Virginia housing data.</p>
+    <div class="grid">
+        <div class="tile">
+            <h3>Affordability Analysis</h3>
+            <p>Shows relative affordability across Virginia cities, highlighting geographic disparities in housing access.</p>
+            <img src="{{ url_for('static', filename='images/va_cities_affordability.png') }}" 
+                 alt="Affordability Analysis" 
+                 style="max-width:100%; border-radius:6px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
+        </div>
+
+        <div class="tile">
+            <h3>Year-over-Year Trends</h3>
+            <p>Visualizes housing price changes across Virginia cities, enabling quick comparison of growth patterns.</p>
+            <img src="{{ url_for('static', filename='images/va_cities_yoy_bar.png') }}" 
+                 alt="YoY Bar Chart" 
+                 style="max-width:100%; border-radius:6px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
+        </div>
+
+        <div class="tile">
+            <h3>Recent Market Shifts</h3>
+            <p>Highlights the most recent year’s housing price changes, providing a snapshot of current market dynamics.</p>
+            <img src="{{ url_for('static', filename='images/va_cities_yoy_last1.png') }}" 
+                 alt="YoY Last 1 Year" 
+                 style="max-width:100%; border-radius:6px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
+        </div>
+
+        <div class="tile">
+            <h3>Decade-Long Trends</h3>
+            <p>Shows ten years of housing price changes, contextualizing long-term growth and regional stability.</p>
+            <img src="{{ url_for('static', filename='images/va_cities_yoy_last10.png') }}" 
+                 alt="YoY Last 10 Years" 
+                 style="max-width:100%; border-radius:6px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
+        </div>
+    </div>
+</section>
     </main>
 
     <footer>
